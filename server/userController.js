@@ -11,19 +11,19 @@ const readUsers = () => JSON.parse(fs.readFileSync(usersFile));
 const writeUsers = (users) => fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
 
 exports.getHomePage = (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "../public", "index.html"));
 };
 
 exports.getSignPage = (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Signin.html"));
+  res.sendFile(path.join(__dirname, "../public", "Signin.html"));
 };
 
 exports.getLoginPage = (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Login.html"));
+  res.sendFile(path.join(__dirname, "../public", "Login.html"));
 };
 
 exports.getProfilePage = (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "Profile.html"));
+  res.sendFile(path.join(__dirname, "../public", "Profile.html"));
 };
 
 exports.registerUser = (req, res) => {

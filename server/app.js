@@ -16,7 +16,9 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+
+// Указываем правильный путь к папке public
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", getHomePage);
 app.get("/sign", getSignPage);
